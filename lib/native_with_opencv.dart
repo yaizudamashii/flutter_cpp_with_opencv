@@ -16,8 +16,8 @@ stdlib.lookupFunction<PosixFreeNative, PosixFree>("free");
 final DynamicLibrary nativeAddLib =
     Platform.isAndroid ? DynamicLibrary.open("libnative_with_opencv.so") : DynamicLibrary.process();
 
-final int Function(int x, int y) nativeAdd =
-    nativeAddLib.lookup<NativeFunction<Int32 Function(Int32, Int32)>>("native_add").asFunction();
+final Pointer<Uint8> Function(Pointer<Uint8>, int x, int y, int u, int v) nativeAdd =
+    nativeAddLib.lookup<NativeFunction<Pointer<Uint8> Function(Pointer<Uint8>, Int32, Int32, Int32, Int32)>>("native_add").asFunction();
 
 final Pointer<Uint8> Function(Pointer<Uint8> original) resizeInterArea =
     nativeAddLib.lookup<NativeFunction<Pointer<Uint8> Function(Pointer<Uint8>)>>("resize_inter_area").asFunction();
