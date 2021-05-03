@@ -22,7 +22,7 @@ final int Function(int x, int y) nativeAdd =
 final Pointer<Uint8> Function(Pointer<Uint8> original, int originalWidth, int originalHeight, int resizedWidth, int resizedHeight) resizeInterArea =
     nativeAddLib.lookup<NativeFunction<Pointer<Uint8> Function(Pointer<Uint8>, Int32, Int32, Int32, Int32)>>("resize_inter_area").asFunction();
 
-Pointer<T> allocate({int count = 1}) {
+Pointer<T> allocate<T extends NativeType>({int count = 1}) {
     final int totalSize = count * sizeOf<T>();
     Pointer<T> result = posixMalloc(totalSize).cast();
     if (result.address == 0) {
