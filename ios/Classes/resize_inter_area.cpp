@@ -8,7 +8,7 @@
 #include <opencv2/imgproc/imgproc.hpp>
 
 extern "C" __attribute__((visibility("default"))) __attribute__((used))
-uint8_t *resize_inter_area(uint8_t *src, uint8_t *dst, int32_t srcWidth, int32_t srcHeight, int32_t dstWidth, int32_t dstHeight) {
+uint8_t *resize_inter_area(uint8_t *src, int32_t srcWidth, int32_t srcHeight, int32_t dstWidth, int32_t dstHeight) {
 
     cv::Mat original(srcWidth, srcHeight, CV_8UC3, src);
     cv::Mat resized(dstWidth, dstHeight, CV_8UC3);

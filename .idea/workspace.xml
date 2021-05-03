@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26bef8f2-cf86-4a80-abf2-110baf253af1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/lib/native_with_opencv.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/native_with_opencv.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/android/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Classes/resize_inter_area.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Classes/resize_inter_area.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,5 +37,20 @@
       <updated>1619983061465</updated>
     </task>
     <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="584" y="297" key="FileChooserDialogImpl" timestamp="1620054296867">
+      <screen x="0" y="23" width="1792" height="1017" />
+    </state>
+    <state x="584" y="297" key="FileChooserDialogImpl/0.23.1792.1017@0.23.1792.1017" timestamp="1620054296867" />
+    <state x="451" y="290" width="719" height="490" key="find.popup" timestamp="1620058968621">
+      <screen x="0" y="23" width="1792" height="1017" />
+    </state>
+    <state x="451" y="290" width="719" height="490" key="find.popup/0.23.1792.1017@0.23.1792.1017" timestamp="1620058968621" />
+    <state x="894" y="277" width="719" height="492" key="find.popup/0.23.1792.1020@0.23.1792.1020" timestamp="1620058058355" />
+    <state x="424" y="254" width="670" height="676" key="search.everywhere.popup" timestamp="1620057905319">
+      <screen x="0" y="23" width="1792" height="1017" />
+    </state>
+    <state x="424" y="254" width="670" height="676" key="search.everywhere.popup/0.23.1792.1017@0.23.1792.1017" timestamp="1620057905319" />
   </component>
 </project>
