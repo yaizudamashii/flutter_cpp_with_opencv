@@ -3,6 +3,7 @@ import 'dart:io'; // For Platform.isX
 
 final DynamicLibrary stdlib = DynamicLibrary.process();
 
+typedef PosixMallocNative = Pointer Function(IntPtr);
 typedef PosixMalloc = Pointer Function(int);
 final PosixMalloc posixMalloc =
 stdlib.lookupFunction<PosixMallocNative, PosixMalloc>("malloc");
