@@ -13,6 +13,6 @@ uint8_t *resize_inter_area(uint8_t *src, uint8_t *dst, int32_t srcWidth, int32_t
     cv::Mat original(srcWidth, srcHeight, CV_8UC3, src);
     cv::Mat resized(dstWidth, dstHeight, CV_8UC3);
 
-    cv::resize(original, resized, cv::Size(dstWidth, dstHeight), 0, 0, CV_INTER_AREA);
+    cv::resize(original, resized, cv::Size(dstWidth, dstHeight), 0, 0, cv::INTER_AREA);
     return resized.data;
 }
