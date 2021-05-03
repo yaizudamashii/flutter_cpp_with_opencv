@@ -19,8 +19,8 @@ final DynamicLibrary nativeAddLib =
 final int Function(int x, int y) nativeAdd =
     nativeAddLib.lookup<NativeFunction<Int32 Function(Int32, Int32)>>("native_add").asFunction();
 
-final Pointer<Uint8> Function(Pointer<Uint8> original, int originalWidth, int originalHeight, int resizedWidth, int resizedHeight) resizeInterArea =
-    nativeAddLib.lookup<NativeFunction<Pointer<Uint8> Function(Pointer<Uint8>, Int32, Int32, Int32, Int32)>>("resize_inter_area").asFunction();
+final Pointer<Uint8> Function(Pointer<Uint8> original) resizeInterArea =
+    nativeAddLib.lookup<NativeFunction<Pointer<Uint8> Function(Pointer<Uint8>)>>("resize_inter_area").asFunction();
 
 Pointer<T> allocate<T extends NativeType>({int count = 1}) {
     final int totalSize = count * sizeOf<T>();
