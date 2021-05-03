@@ -1,6 +1,17 @@
 import 'dart:ffi'; // For FFI
 import 'dart:io'; // For Platform.isX
 
+final DynamicLibrary stdlib = DynamicLibrary.process();
+
+typedef PosixMalloc = Pointer Function(int);
+final PosixMalloc posixMalloc =
+stdlib.lookupFunction<PosixMallocNative, PosixMalloc>("malloc");
+
+typedef PosixFreeNative = Void Function(Pointer);
+typedef PosixFree = void Function(Pointer);
+final PosixFree posixFree =
+stdlib.lookupFunction<PosixFreeNative, PosixFree>("free");
+
 final DynamicLibrary nativeAddLib =
     Platform.isAndroid ? DynamicLibrary.open("libnative_with_opencv.so") : DynamicLibrary.process();
 
@@ -12,18 +23,13 @@ final Pointer<Uint8> Function(Pointer<Uint8> original, int originalWidth, int or
 
 Pointer<T> allocate<T extends NativeType>({int count = 1}) {
     final int totalSize = count * sizeOf<T>();
-    Pointer<T> result;
-    if (Platform.isWindows) {
-        result = winHeapAlloc(processHeap, /*flags=*/ 0, totalSize).cast();
-    } else {
-        result = posixMalloc(totalSize).cast();
-    }
+    Pointer<T> result = posixMalloc(totalSize).cast();
     if (result.address == 0) {
         throw ArgumentError("Could not allocate $totalSize bytes.");
     }
     return result;
 }
 
-final void free(Pointer ptr) {
+void free(Pointer ptr) {
     posixFree(ptr);
 }
