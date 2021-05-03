@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26bef8f2-cf86-4a80-abf2-110baf253af1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ios/Classes/resize_inter_area.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/native_with_opencv.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/native_with_opencv.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/native_with_opencv.iml" beforeDir="false" afterPath="$PROJECT_DIR$/native_with_opencv.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Classes/resize_inter_area.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Classes/resize_inter_area.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
