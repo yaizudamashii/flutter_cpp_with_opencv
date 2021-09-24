@@ -80,6 +80,7 @@ add_library(native_with_opencv
 
 target_link_libraries(native_with_opencv
         ${log-lib}
+        imgproc # note: need to be placed *before* "core"
         core
         tbb # note: need to be placed *after* "core"
         cpufeatures
